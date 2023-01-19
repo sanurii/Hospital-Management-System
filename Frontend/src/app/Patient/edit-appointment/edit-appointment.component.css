@@ -1,0 +1,17 @@
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  .cardposition{
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%
+  }
+
+  .fieldsBottom{
+    margin-bottom: 1%;
+  }
+
+  .validationColor{
+    color: red;
+  }

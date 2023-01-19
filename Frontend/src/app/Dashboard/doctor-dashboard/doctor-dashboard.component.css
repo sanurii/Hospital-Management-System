@@ -1,0 +1,19 @@
+.nav {
+    background-color: #1b2841;
+    margin-top: 1%;
+  }
+
+  .doctordashname {
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    font-family: Courier New, monospace;
+  }
+  .doctordash {
+    background-image: url("../../../assets/image/doctordash.jpg");
+    padding-top: 1%;
+    padding-bottom: 0.1%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

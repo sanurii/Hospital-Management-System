@@ -1,0 +1,57 @@
+<div>
+    <br>
+    <div class="center">
+        <h1>
+          <span
+            class="badge text-dark opacity-90 fs-3">
+            All Pharmacy Details
+          </span>
+        </h1>
+      </div>
+      <br>
+      <table class="table ">
+        <thead class="table-info">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Medicine name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Expiration date</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let pharmacy of pharmacys; let i = index">
+              <th>{{i + 1}}</th>
+              <td>{{pharmacy.medicineName}}</td>
+              <td>{{pharmacy.type}}</td>
+              <td>{{pharmacy.quantity}}</td>
+              <td>{{pharmacy.expirationDate}}</td>
+              <td>{{pharmacy.price}}</td>
+              <td>
+                <!-- <button class="btn btn-primary" routerLink="">EDIT</button>
+                <button class="btn btn-danger" (click)="deleteData(patient._id)">DELETE</button> -->
+                <a class="btn btn-warning text-dark"  href="Edit-Pharmacy/{{pharmacy._id}}"><i class="fas fa-edit"></i>&nbsp;Edit</a>
+                      &nbsp; &nbsp;
+                <a class="btn btn-danger text-dark "(click)="deleteData(pharmacy._id)">
+                  <i class="far fa-trash-alt"></i>&nbsp;Delete
+                </a>
+            </td>
+            </tr>
+         
+        </tbody>
+      </table>
+    
+    
+      <div class="center buttonBottom">
+        <a class="btn btn-success" href="Create-Pharmacy">
+          Add Pharmacy
+        </a>
+      </div>
+    
+    
+    </div>
+    
+    

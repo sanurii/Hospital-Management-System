@@ -1,0 +1,116 @@
+<div class="card cardposition" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Edit Patient Check-ins</h5>
+      <div class="container">
+       
+            <div class="form-group fieldsBottom">
+                <label for="paname">Patient Name</label>
+                <input type="text" [(ngModel)]="patientchecking.paname" [ngClass]="{ 'is-invalid':submitted && f.paname.errors}"
+                    class="form-control" placeholder="Enter Patient Name">
+                <!-- <div *ngIf="submitted && f.paname.errors" class="Invalid-feedback">
+                    <div *ngIf="f.paname.errors.required" class="validationColor">Patient Name is required</div>
+                </div> -->
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="diagnose">Diagnose</label>
+                <input type="text" [(ngModel)]="patientchecking.diagnose" [ngClass]="{ 'is-invalid':submitted && f.diagnose.errors}"
+                    class="form-control" placeholder="Enter Diagnose">
+                <!-- <div *ngIf="submitted && f.diagnose.errors" class="Invalid-feedback">
+                    <div *ngIf="f.diagnose.errors.required" class="validationColor">Diagnose is required</div>
+                </div> -->
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="ddate">Date</label>
+                <input type="date" [(ngModel)]="patientchecking.ddate" [ngClass]="{ 'is-invalid':submitted && f.ddate.errors}"
+                    class="form-control" placeholder="Enter Date">
+                <!-- <div *ngIf="submitted && f.ddate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.ddate.errors.required" class="validationColor">Date is required</div>
+                </div> -->
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="phone">Phone Number</label>
+                <input type="number" [(ngModel)]="patientchecking.phone" [ngClass]="{ 'is-invalid':submitted && f.phone.errors}"
+                    class="form-control" placeholder="Enter Phone Number">
+                <!-- <div *ngIf="submitted && f.phone.errors" class="Invalid-feedback">
+                    <div *ngIf="f.phone.errors.required" class="validationColor">Phone Number is required</div>
+                </div> -->
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="dname">Doctor's Name</label>
+                <input type="text" [(ngModel)]="patientchecking.dname" [ngClass]="{ 'is-invalid':submitted && f.dname.errors}"
+                    class="form-control" placeholder="Enter Doctor's Name">
+                <!-- <div *ngIf="submitted && f.dname.errors" class="Invalid-feedback">
+                    <div *ngIf="f.dname.errors.required" class="validationColor">Doctor's Name is required</div>
+                </div> -->
+            </div>
+            <br>
+            <h4>Prescriptions</h4>
+            <div class="form-group col-md-6 fieldsBottom">
+                <label for="med1">Panadol</label>
+                <select [(ngModel)]="patientchecking.med1" defaultValue="Select option"
+                    [ngClass]="{ 'is-invalid':submitted && f.med1.errors}" class="form-control">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                <!-- <div *ngIf="submitted && f.med1.errors" class="Invalid-feedback">
+                    <div *ngIf="f.med1.errors.required" class="validationColor">Panadol is required</div>
+                </div> -->
+           
+            </div>
+    
+            <div class="form-group col-md-6 fieldsBottom">
+                <label for="ddate">Asprin</label>
+                <select [(ngModel)]="patientchecking.med2" [ngClass]="{ 'is-invalid':submitted && f.med2.errors}"
+                    class="form-control" >
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                <!-- <div *ngIf="submitted && f.med2.errors" class="Invalid-feedback">
+                    <div *ngIf="f.med2.errors.required" class="validationColor">Asprin is required</div>
+                </div> -->
+              
+            </div>
+    
+            <div class="form-group col-md-6 fieldsBottom">
+                <label for="med3">Ibuproten</label>
+                <select [(ngModel)]="patientchecking.med3" [ngClass]="{ 'is-invalid':submitted && f.med3.errors}"
+                    class="form-control" >
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                <!-- <div *ngIf="submitted && f.med3.errors" class="Invalid-feedback">
+                    <div *ngIf="f.med3.errors.required" class="validationColor">Ibuproten is required</div>
+                </div> -->
+                
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="med4">Other</label>
+                <textarea type="text" [(ngModel)]="patientchecking.med4" [ngClass]="{ 'is-invalid':submitted && f.med4.errors}"
+                    class="form-control" placeholder="Other">
+                </textarea>
+                <!-- <div *ngIf="submitted && f.med4.errors" class="Invalid-feedback">
+                    <div *ngIf="f.med4.errors.required" class="validationColor">Other is required</div>
+                </div> -->
+                
+            </div>
+    
+    
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success" (click)="updateData()">Submit</button>
+    
+            </div>
+            
+    </div>
+    
+      
+    </div>
+  </div>

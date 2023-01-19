@@ -1,0 +1,5 @@
+{
+    "mongoURI": "mongodb+srv://NSBM:nsbm123@cluster0.gt5yyco.mongodb.net/?retryWrites=true&w=majority",
+    "secretOrKey": "secret"
+}
+

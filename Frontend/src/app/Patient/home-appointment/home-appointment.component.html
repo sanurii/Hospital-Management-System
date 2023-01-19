@@ -1,0 +1,60 @@
+<div>
+<br>
+<div class="center">
+    <h1>
+      <span
+        class="badge text-dark opacity-90 fs-3">
+        All Appointment Details
+      </span>
+    </h1>
+  </div>
+  <br>
+  <table class="table ">
+    <thead class="table-info">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Date</th>
+        <th scope="col">Email</th>
+        <th scope="col">NIC/Passport</th>
+        <th scope="col">Area</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let appointment of appointments; let i = index">
+          <th>{{i + 1}}</th>
+          <td>{{appointment.title}}</td>
+          <td>{{appointment.pname}}</td>
+          <td>{{appointment.mobile}}</td>
+          <td>{{appointment.date}}</td>
+          <td>{{appointment.email}}</td>
+          <td>{{appointment.nicpass}}</td>
+          <td>{{appointment.area}}</td>
+          <td>
+            <!-- <button class="btn btn-primary" routerLink="">EDIT</button>
+            <button class="btn btn-danger" (click)="deleteData(patient._id)">DELETE</button> -->
+            <a class="btn btn-warning text-dark"  href="Edit-Appointment/{{appointment._id}}"><i class="fas fa-edit"></i>&nbsp;Edit</a>
+                  &nbsp; &nbsp;
+            <a class="btn btn-danger text-dark "(click)="deleteData(appointment._id)">
+              <i class="far fa-trash-alt"></i>&nbsp;Delete
+            </a>
+        </td>
+        </tr>
+     
+    </tbody>
+  </table>
+
+
+  <div class="center buttonBottom">
+    <a class="btn btn-success" href="Create-Appointment">
+      Book Appointment
+    </a>
+  </div>
+
+
+</div>
+

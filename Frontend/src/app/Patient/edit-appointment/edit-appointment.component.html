@@ -1,0 +1,91 @@
+
+<div class="card cardposition" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Edit My Appointment Details</h5>
+      <div class="container">
+    
+            <div class="form-group fieldsBottom">
+                <label for="title">Patient Name</label>
+                <select [(ngModel)]="appoinment.title" [ngClass]="{ 'is-invalid':submitted && f.title.errors}"
+                    class="form-control" >
+                    <option>Mr</option>
+                    <option>Mrs</option>
+                    <option>Mast</option>
+                    <option>Dr</option>
+                    <option>Prof</option>
+                    <option>Baby</option>
+                    </select>
+                <!-- <div *ngIf="submitted && f.title.errors" class="Invalid-feedback">
+                    <div *ngIf="f.title.errors.required" class="validationColor">Title is required</div>
+                </div> -->
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="pname">Patient Name</label>
+                <input type="text" [(ngModel)]="appoinment.pname" [ngClass]="{ 'is-invalid':submitted && f.pname.errors}"
+                    class="form-control" placeholder="Enter Patient Name">
+                <!-- <div *ngIf="submitted && f.pname.errors" class="Invalid-feedback">
+                    <div *ngIf="f.pname.errors.required" class="validationColor">Patient Name is required</div>
+                </div> -->
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="mobile">Mobile Number</label>
+                <input type="number" [(ngModel)]="appoinment.mobile" [ngClass]="{ 'is-invalid':submitted && f.mobile.errors}"
+                    class="form-control" placeholder="Enter Mobile Number">
+                <!-- <div *ngIf="submitted && f.mobile.errors" class="Invalid-feedback">
+                    <div *ngIf="f.mobile.errors.required" class="validationColor">Mobile Number is required</div>
+                </div> -->
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="date">Date</label>
+                <input type="date"[(ngModel)]="appoinment.date" [ngClass]="{ 'is-invalid':submitted && f.date.errors}"
+                    class="form-control" placeholder="Enter Date">
+                <!-- <div *ngIf="submitted && f.date.errors" class="Invalid-feedback">
+                    <div *ngIf="f.date.errors.required" class="validationColor">Date is required</div>
+                </div> -->
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="email">Email</label>
+                <input type="email" [(ngModel)]="appoinment.email" [ngClass]="{ 'is-invalid':submitted && f.email.errors}"
+                    class="form-control" placeholder="Enter Email">
+                <!-- <div *ngIf="submitted && f.email.errors" class="Invalid-feedback">
+                    <div *ngIf="f.email.errors.required" class="validationColor">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div> -->
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="nicpass">NIC/Passport</label>
+                <input type="text"[(ngModel)]="appoinment.nicpass" [ngClass]="{ 'is-invalid':submitted && f.nicpass.errors}"
+                    class="form-control" placeholder="Enter NIC/Passport">
+                <!-- <div *ngIf="submitted && f.nicpass.errors" class="Invalid-feedback">
+                    <div *ngIf="f.nicpass.errors.required" class="validationColor">NIC/Passport is required</div>
+                </div> -->
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="area">Area</label>
+                <input type="text"[(ngModel)]="appoinment.area" [ngClass]="{ 'is-invalid':submitted && f.area.errors}"
+                    class="form-control" placeholder="Enter Area">
+                <!-- <div *ngIf="submitted && f.area.errors" class="Invalid-feedback">
+                    <div *ngIf="f.area.errors.required" class="validationColor">Area is required</div>
+                </div> -->
+            </div>
+            
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success" (click)="updateData()">Submit</button>
+    
+            </div>
+ 
+    </div>
+    
+      
+    </div>
+  </div>

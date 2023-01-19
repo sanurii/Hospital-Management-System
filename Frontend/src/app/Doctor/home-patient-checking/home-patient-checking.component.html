@@ -1,0 +1,63 @@
+<div>
+<br>
+<div class="center">
+    <h1>
+      <span
+        class="badge text-dark opacity-90 fs-3">
+        All Patient Check-In Details
+      </span>
+    </h1>
+  </div>
+  <br>
+  <table class="table ">
+    <thead class="table-info">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Diagnose</th>
+        <th scope="col">Date</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Panadol</th>
+        <th scope="col">Asprin</th>
+        <th scope="col">Ibuproten</th>
+        <th scope="col">Other</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let patient of patientcheckings; let i = index">
+          <th>{{i + 1}}</th>
+          <td>{{patient.paname}}</td>
+          <td>{{patient.diagnose}}</td>
+          <td>{{patient.ddate}}</td>
+          <td>{{patient.phone}}</td>
+          <td>{{patient.dname}}</td>
+          <td>{{patient.med1}}</td>
+          <td>{{patient.med2}}</td>
+          <td>{{patient.med3}}</td>
+          <td>{{patient.med4}}</td>
+          <td>
+            <!-- <button class="btn btn-primary" routerLink="">EDIT</button>
+            <button class="btn btn-danger" (click)="deleteData(patient._id)">DELETE</button> -->
+            <a class="btn btn-warning text-dark"  href="edit-patientChecking/{{patient._id}}"><i class="fas fa-edit"></i>&nbsp;Edit</a>
+                  &nbsp; &nbsp;
+            <a class="btn btn-danger text-dark "(click)="deleteData(patient._id)">
+              <i class="far fa-trash-alt"></i>&nbsp;Delete
+            </a>
+        </td>
+        </tr>
+     
+    </tbody>
+  </table>
+
+
+  <div class="center buttonBottom">
+    <a class="btn btn-success" href="createpatientChecking">
+      Add Patient Check-in
+    </a>
+  </div>
+
+
+</div>

@@ -1,0 +1,72 @@
+<div class="card cardposition" style="width: 65rem; ">
+    <div class="card-body">
+      <h5 class="card-title badge text-dark opacity-90 fs-3 center">Add pharmacy booking</h5>
+      <div class="container">
+        <form (ngSubmit)="insertDataPP()" [formGroup]="form">
+    
+            <div class="form-group fieldsBottom">
+                <label for="medicineName">Medicine Name</label>
+                <input type="text" formControlName="medicineName" [ngClass]="{ 'is-invalid':submitted && f.medicineName.errors}"
+                    class="form-control" placeholder="Enter Medicine Name">
+                <div *ngIf="submitted && f.medicineName.errors" class="Invalid-feedback">
+                    <div *ngIf="f.medicineName.errors.required" class="validationColor">Medicine Name is required</div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="form-group fieldsBottom">
+                <label for="type">Medicine type</label>
+                <select  formControlName="type" [ngClass]="{ 'is-invalid':submitted && f.type.errors}"
+                    class="form-control" >
+                    <option>Tablet</option>
+                    <option>Syrup</option>
+                    <option>Inhaler</option>
+                    <option>Drops</option>
+                    <option>Topical</option>
+                    </select>
+                <div *ngIf="submitted && f.type.errors" class="Invalid-feedback">
+                    <div *ngIf="f.type.errors.required" class="validationColor">Medicine type is required</div>
+                </div>
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="quantity">Quantity</label>
+                <input type="number" formControlName="quantity" [ngClass]="{ 'is-invalid':submitted && f.quantity.errors}"
+                    class="form-control" placeholder="Enter Quantity">
+                <div *ngIf="submitted && f.quantity.errors" class="Invalid-feedback">
+                    <div *ngIf="f.quantity.errors.required" class="validationColor">Quantity is required</div>
+                </div>
+            </div>
+    
+            <div class="form-group fieldsBottom">
+                <label for="expirationDate">Expiration date</label>
+                <input type="date" formControlName="expirationDate" [ngClass]="{ 'is-invalid':submitted && f.expirationDate.errors}"
+                    class="form-control" placeholder="Enter Expiration date">
+                <div *ngIf="submitted && f.expirationDate.errors" class="Invalid-feedback">
+                    <div *ngIf="f.expirationDate.errors.required" class="validationColor">Expiration date is required</div>       
+                </div>
+            </div>
+
+            <div class="form-group fieldsBottom">
+                <label for="price">Price</label>
+                <input type="number" formControlName="price" [ngClass]="{ 'is-invalid':submitted && f.price.errors}"
+                    class="form-control" placeholder="Enter Price">
+                <div *ngIf="submitted && f.price.errors" class="Invalid-feedback">
+                    <div *ngIf="f.price.errors.required" class="validationColor">Price is required</div>
+                </div>
+            </div>
+
+            
+            <br>
+            <div class="form-group center">
+                <button class="btn btn-success">Submit</button>
+    
+            </div>
+        </form>
+    </div>
+    
+      
+    </div>
+  </div>
+
