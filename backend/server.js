@@ -9,6 +9,30 @@ dotenv.config();
 
 const app = express();
 
+const server = require('http').createServer(app);
+const WebSocket = require('ws');
+
+
+//Web Sockets 
+const wss = new WebSocket.Server({ server:server });
+
+wss.on('connection', function connection(ws) {
+  console.log('A WebSockets Connected!');
+  ws.send('Welcome Client!');
+
+  ws.on('message', function incoming(message) {
+    console.log('received: %s', message);
+
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(message);
+      }
+    });
+    
+  });
+}); 
+
+
 const Employee = require("./routes/employee");
 const AppBooking = require("./routes/AppBooking");
 const PatientChecking = require("./routes/PatientCheckin");
